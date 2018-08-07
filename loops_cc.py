@@ -18,6 +18,7 @@ print(numbers)
 numbers = []
 for value in range(1, 1000000):
     numbers.append(value)
+    
 print(numbers)
 
 
@@ -44,6 +45,7 @@ print(numbers)
 numbers = []
 for value in range(1,20,2):
     numbers.append(value)
+    
 print(numbers)
 
 
@@ -52,12 +54,14 @@ for value in range(3,30,3):
     print(value)
 
 new_list = list(range(3,30,3))
+
 print(new_list)
 
 #alternative:
 second_list = []
 for value in range(3,30,3):
     second_list.append(value)
+    
 print(second_list)
 
 
