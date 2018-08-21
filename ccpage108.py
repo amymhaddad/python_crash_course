@@ -6,10 +6,10 @@ Created on Thu May 10 15:34:22 2018
 @author: amyhaddad
 """
 
-# Create a glossary of terms in Python. 
+# Create a glossary of terms in Python.
 # Use a loop to run through the dictionary's keys and values.
 python_glossary = {
-    'list': 'collection of items', 
+    'list': 'collection of items',
     'range': 'generates series of numbers',
     'input': 'get information from user',
     'len': 'find out umber of characters in an object',
@@ -51,7 +51,6 @@ for country in rivers.values():
 
 # Make a list of people who should take the favorite languages poll.
 # Include some names that are already in the dictionary and some that are not.
-
 people_to_take_poll = {
     'jen': 'python',
     'sarah': 'c',
