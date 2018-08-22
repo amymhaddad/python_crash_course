@@ -6,11 +6,11 @@ Created on Thu May 10 15:34:22 2018
 @author: amyhaddad
 """
 
-# Use a dictionary to store information about a person you know. 
-# Store their first name, last name, age, and the city in which they live. 
+# Use a dictionary to store information about a person you know.
+# Store their first name, last name, age, and the city in which they live.
 # Print each piece of information stored in your dictionary.
 friend = {
-    'first_name': 'belina', 
+    'first_name': 'belina',
     'last_name': 'smith',
     'city': 'boston',
 }
@@ -20,10 +20,10 @@ print(friend['last_name'].capitalize())
 print(friend['city'].capitalize())
 
 
-# Use a dictionary to store people’s favorite numbers. 
-# Think of five names, and use them as keys in your dictionary. 
-# Think of a favorite number for each person, and store each as a value in your dictionary. 
-# Print each person’s name and their favorite number. 
+# Use a dictionary to store people’s favorite numbers.
+# Think of five names, and use them as keys in your dictionary.
+# Think of a favorite number for each person, and store each as a value in your dictionary.
+# Print each person’s name and their favorite number.
 names_and_fav_numbers = {
     'theo': 10,
     'phil': 9,
@@ -45,7 +45,7 @@ print(f"Melinda's favorite number is: {names_and_fav_numbers['melinda']}.")
 print(f"Sarah's favorite number is: {names_and_fav_numbers['sarah']}.")
 
 
-# Think of five programming words you’ve learned about in the previous chapters. 
+# Think of five programming words you’ve learned about in the previous chapters.
 # Use these words as the keys in your glossary, and store their meanings as values.
 glossary = {
     'len': 'get the length of an object',
