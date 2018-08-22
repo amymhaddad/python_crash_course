@@ -38,6 +38,13 @@ for river in rivers.keys():
     else:
         print(f"The {river.capitalize()} River is in Egypt.")
     
+# An alternative way to say something about each river without a list:
+for river, country in rivers.items():
+    if country == 'usa':
+        print(f"{river.capitalize()} River is in the {country.upper()}.")
+    else:
+        print(f"{river.capitalize()} River is in {country.capitalize()}.")
+        
 
 # Use a loop to print the name of each river included in the dictionary.
 for name in rivers.keys():
