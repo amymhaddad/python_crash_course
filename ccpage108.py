@@ -18,8 +18,9 @@ python_glossary = {
 }
 
 for term, definition in python_glossary.items():
-    print(f"\nTerm: {term}")
+    print(f"Term: {term}")
     print(f"Definition: {definition}")
+    print('\n')
 
 
 # Make a dictionary containing three major rivers and the country each river runs through.
