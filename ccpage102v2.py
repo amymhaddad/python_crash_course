@@ -34,8 +34,9 @@ names_and_fav_numbers = {
 
 # Option 1: Printing each person's name and number
 for name, number in names_and_fav_numbers.items():
-    print(f"\nName: {name.capitalize()}")
+    print(f"Name: {name.capitalize()}")
     print(f"Favorite number: {number}")
+    print('\n')
 
 # Option 2: printing person's name and number
 print(f"Theo's favorite number is: {names_and_fav_numbers['theo']}.")
