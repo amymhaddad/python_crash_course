@@ -21,23 +21,25 @@ while toppings != 'quit':
 
 # A movie theater charges different ticket prices depending on a person’s age . If a person is under the age of 3, the ticket is free; if they are between 3 and 12, the ticket is $10; and if they are over age 12, the ticket is $15.
 # Write a loop in which you ask users their age, and then tell them the cost of their movie ticket.
-age_prompt = "Enter an age and I'll tell you the ticket price. "
-age_prompt += "(Type 'quit' when you're finished.) "
+age = "Tell me your age and I'll tell you the price of admission."
+age += "\nType 'quit' when finished. "
 
 active = True
 while active:
-    age = input(age_prompt)
+    guest_age = input(age)
 
-    if age == 'quit':
+    if guest_age == 'quit':
         active = False
     else:
-        age = int(age)
-        if age > 0 and age < 3:
-            print("You're free.")
-        elif age > 3 and age <= 12:
+        guest_age = int(guest_age)
+        if guest_age < 0:
+            print("Please enter a valid age.")
+        elif guest_age >= 0 and guest_age < 3:
+            print("You're free!")
+        elif guest_age >= 3 and guest_age <= 12:
             print("You're cost is $10.")
         else:
-            print("Youre cost is $15.")
+            print("Your cost is $15.")
 
 
 # Write different versions of either Exercise 7-4 and do each of the following once:
