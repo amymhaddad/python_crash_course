@@ -7,7 +7,7 @@ Created on Thu May 10 15:34:22 2018
 """
 
 # Make a list called sandwich_orders and fill it with the names of vari- ous sandwiches.
-# Then make an empty list called finished_sandwiches. 
+# Then make an empty list called finished_sandwiches.
 # Loop through the list of sandwich orders and print a message for each order, such as I made your tuna sandwich.
 # As each sandwich is made, move it to the list of finished sandwiches.
 # After all the sandwiches have been made, print a message listing each sandwich that was made.
@@ -64,14 +64,15 @@ while active:
     responses[name] = dream_vacation_location
 
     print("Is there another person who should take this poll?")
-    repeat_with_new_user = input("Type: 'yes' or 'no': ")
-    normalized_repeat_with_new_user = repeat_with_new_user.lower()
+    repeat_with_new_user_input = input("Type: 'yes' or 'no': ")
+    normalized_repeat_with_new_user_input = repeat_with_new_user_input.lower()
 
-    if normalized_repeat_with_new_user == 'no':
+    if normalized_repeat_with_new_user_input == 'no':
         active = False
     
 # Write loop to print results
 print("These are the results of the poll: ")
 for name, location in responses.items():
-    print(f"\nName: {name.capitalize()}")
+    print(f"Name: {name.capitalize()}")
     print(f"Dream Vacation Location: {location.capitalize()}")
+    print('\n')
