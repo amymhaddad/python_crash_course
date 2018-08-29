@@ -45,12 +45,10 @@ pets = {
         'animal_type': 'dog',
         'owner_name': 'posie',
         },
-    
     'elle': {
         'animal_type': 'cat',
         'owner_name': 'david',
         },
-    
     'kitty': {
         'animal_type': 'hampster',
         'owner_name': 'chris',
@@ -61,7 +59,7 @@ for pet_name, pet_info in pets.items():
     print(f"Pet name: {pet_name.capitalize()}")
     print(f"Animal type: {pet_info['animal_type'].capitalize()}")
     print(f"Owner name: {pet_info['owner_name'].capitalize()}")
-    print('\n') 
+    print('\n')
 
 # Make a dictionary called favorite_places.
 # Think of three names to use as keys in the dictionary, and store one to three favorite places for each person.
@@ -107,7 +105,7 @@ cities = {
         'famous_food': 'lobster',
     },
     'dublin': {
-        'country': 'ireland', 
+        'country': 'ireland',
         'approximate_population': '500,000',
         'famous_food': 'soda bread',
     },
