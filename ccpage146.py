@@ -61,20 +61,20 @@ print(album_3_info)
 
 # Add an optional parameter to make_album() that allows you to store the number of tracks on an album.
 # If the calling line includes a value for the num- ber of tracks, add that value to the album’s dictionary.
-def make_album(name, title, tracks = ''):
+def make_album(name, title, tracks=''):
     """Describe album"""
     album_1 = {'first_name': name, 'title': title}
 
-    if tracks: 
+    if tracks:
         album_1['total_tracks'] = tracks
     
     return album_1
 
-album_info = make_album('jill', 'hello 5', tracks = 5)
+album_info = make_album('jill', 'hello 5', tracks=5)
 print(album_info)
 
 
-# Start with your program from Exercise 8-7 . Write a while loop that allows users to enter an album’s artist and title. 
+# Start with your program from Exercise 8-7 . Write a while loop that allows users to enter an album’s artist and title.
 # Once you have that information, call make_album() with the user’s input and print the dictionary that’s created.
 
 def make_album(name, title):
@@ -87,7 +87,7 @@ while True:
     print("Enter information when prompted. Type 'q' to quit. ")
 
     f_name = input("Enter your full name: ")
-    if f_name == 'q': 
+    if f_name == 'q':
         break
 
     a_title = input("Enter the album title: ")
