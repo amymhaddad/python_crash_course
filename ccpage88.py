@@ -30,8 +30,8 @@ else:
     print("You're a senior.")
 
 
-# Make a list of fruite and write five if statements. 
-# Each should check whether a certain kind of fruit is in your list. 
+# Make a list of fruite and write five if statements.
+# Each should check whether a certain kind of fruit is in your list.
 # If the fruit is in your list, the if block should print a statement.
 
 fruits = ['apples', 'kiwi', 'oranges', 'pinapple', 'cherries']
