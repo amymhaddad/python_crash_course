@@ -28,18 +28,19 @@ def make_great(names):
         print(magician_name)
 
 make_great(magicians)
+
 show_magicians(magicians)
 
 
-# Start with your work from Exercise 8-10 . Call the function make_great() with a copy of the list of magicians’ names. 
-# Because the original list will be unchanged, return the new list and store it in a separate list. 
+# Start with your work from Exercise 8-10 . Call the function make_great() with a copy of the list of magicians’ names.
+# Because the original list will be unchanged, return the new list and store it in a separate list.
 # Call show_magicians() with each list to show that you have one list of the origi- nal names and one list with the Great added to each magician’s name.
 magicians = ['ed', 'bob', 'sherry']
 new_list_magicians = magicians[:]
 
 def make_great(names):
     """List "the great" magicians using a copy of the list"""
-    for name in names: 
+    for name in names:
         magician_name = name + " the Great"
         print(magician_name)
 
