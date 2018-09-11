@@ -21,7 +21,7 @@ guests.remove("mike")
 guests.append("sarah")
 
 
-Print a second set of invitation messages, one for each person who is still in your list.
+# Print a second set of invitation messages, one for each person who is still in your list.
 print(f"{guests[0].capitalize()}, you're still invited to dinner.")
 print(f"{guests[1].capitalize()}, you're still invited to dinner.")
 print(f"{guests[-1].capitalize()}, you're invited to dinner.")
