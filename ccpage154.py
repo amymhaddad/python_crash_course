@@ -39,6 +39,26 @@ def build_profile(first, last, **user_info):
 profile_info = build_profile('amy', 'haddad', age=34, location='boston')
 print(profile_info)
 
+# Alternative:
+def build_profile(first, last, age, location, food):
+    """Build a profile that describes me"""
+    my_profile = {
+        'first_name': first,
+        'last_name': last, 
+        'current_age': age,
+        'current_location': location, 
+        'favorite_food': food,
+    }
+    return my_profile
+
+
+amy_info = build_profile(first='amy',
+                        last='haddad',
+                        age=34,
+                        location='boston',
+                        food='baklava')
+print(amy_info)
+
 
 # Write a function that stores information about a car in a diction- ary.
 # The function should always receive a manufacturer and a model name.
