@@ -7,7 +7,7 @@ Created on Thu May 10 15:34:22 2018
 """
 
 # Write a function that accepts a list of items a person wants on a sandwich.
-# The function should have one parameter that collects as many items as the function call provides, 
+# The function should have one parameter that collects as many items as the function call provides,
 # and it should print a summary of the sand- wich that is being ordered.
 # Call the function three times, using a different num- ber of arguments each time.
 
@@ -15,8 +15,11 @@ def make_sandwich(*sandwich_items):
     """List items on a sandwich"""
     print(sandwich_items)
 
+
 make_sandwich('lettuce', 'peppers', 'onions')
+
 make_sandwich('cheese', 'ham')
+
 make_sandwich('bread', 'jelly')
 
 
@@ -30,8 +33,10 @@ def build_profile(first, last, **user_info):
     profile_1['last_name'] = last
     for key, values in user_info.items():
         profile_1[key] = values
-    
+
+
     return profile_1
+
 
 profile_info = build_profile('amy', 'haddad', age=34, location='boston')
 print(profile_info)
@@ -51,6 +56,7 @@ def car(manufacturer, model, **car_info):
         toyota[key] = values
 
     return toyota
+
 
 toyota_info = car('toyota', 't_1', year=2012, miles=1000)
 print(toyota_info)
