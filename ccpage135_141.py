@@ -34,30 +34,35 @@ def make_shirt(size, text):
     print(f"The t-shirt is size {size} and says \'{text}.\'")
 
 make_shirt('small', 'i love python')
-make_shirt(text = 'hello world', size = 'medium')
+
+make_shirt(text='hello world', size='medium')
 
 
 # Modify the make_shirt() function so that shirts are large by default with a message that reads I love Python.
 # Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
-def make_shirt(text = 'i love python', size = 'large'):
+def make_shirt(text='i love python', size='large'):
     """Describe shirt"""
     print(f"The shirt is size {size} and says \'{text}.\'")
 
 large_shirt = make_shirt()
-meduim_shirt = make_shirt(size = 'medium')
-small_shirt = make_shirt(size = 'small', text = 'boston')
+
+meduim_shirt = make_shirt(size='medium')
+
+small_shirt = make_shirt(size='small', text='boston')
 
 
 # Write a function called describe_city() that accepts the name of a city and its country.
 # The function should print a simple sentence, such as Reykjavik is in Iceland.
-# Give the parameter for the country a default value. 
+# Give the parameter for the country a default value.
 # Call your function for three different cities, at least one of which is not in the default country.
-def describe_city(city, country = 'united states'):
+def describe_city(city, country='united states'):
     """Describe a city"""
     print(f"{city.title()} is in the {country.title()}.")
     print(f"{city.title()} is the capital.")
     print(f"{city.title()} has good food.")
 
-describe_city(city = 'boston')
-describe_city(city = 'providence')
-describe_city(city = 'dublin', country = 'ireland')
+describe_city(city='boston')
+
+describe_city(city='providence')
+
+describe_city(city='dublin', country='ireland')
