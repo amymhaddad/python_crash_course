@@ -41,12 +41,14 @@ print(profile_info)
 
 # Alternative:
 def build_profile(first, last, age, location, food):
+    
+    
     """Build a profile that describes me"""
     my_profile = {
         'first_name': first,
         'last_name': last, 
         'current_age': age,
-        'current_location': location, 
+        'current_location': location,
         'favorite_food': food,
     }
     return my_profile
@@ -60,7 +62,7 @@ amy_info = build_profile(first='amy',
 print(amy_info)
 
 
-# Write a function that stores information about a car in a diction- ary.
+# Write a function that stores information about a car in a diction-ary.
 # The function should always receive a manufacturer and a model name.
 # It should then accept an arbitrary number of keyword arguments.
 # Call the func- tion with the required information and two other name-value pairs
@@ -68,6 +70,8 @@ print(amy_info)
 def car(manufacturer, model, **car_info):
     """Info about a car"""
     toyota = {}
+    
+    
     toyota['manu_name'] = manufacturer
     toyota['model_name'] = model
     for key, values in car_info.items():
@@ -81,6 +85,8 @@ print(toyota_info)
 
 # Alternative:
 def car(manufacturer, model, **car_info):
+    
+    
     """Create a dictionary about a car"""
     car_1 = {'car_manufacturer': manufacturer, 'car_model': model}
     for key, values in car_info.items():
@@ -92,4 +98,3 @@ toyota = car('toyota',
             year=2012, 
             miles=100000)
 print(toyota)
-
