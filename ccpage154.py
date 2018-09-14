@@ -58,3 +58,18 @@ def car(manufacturer, model, **car_info):
 
 toyota_info = car('toyota', 't_1', year=2012, miles=1000)
 print(toyota_info)
+
+# Alternative:
+def car(manufacturer, model, **car_info):
+    """Create a dictionary about a car"""
+    car_1 = {'car_manufacturer': manufacturer, 'car_model': model}
+    for key, values in car_info.items():
+        car_1[key] = values
+    return car_1
+
+toyota = car('toyota', 
+            't-10', 
+            year=2012, 
+            miles=100000)
+print(toyota)
+
