@@ -33,8 +33,6 @@ def build_profile(first, last, **user_info):
     profile_1['last_name'] = last
     for key, values in user_info.items():
         profile_1[key] = values
-
-
     return profile_1
 
 
