@@ -41,8 +41,6 @@ print(profile_info)
 
 # Alternative:
 def build_profile(first, last, age, location, food):
-    
-    
     """Build a profile that describes me"""
     my_profile = {
         'first_name': first,
@@ -70,8 +68,6 @@ print(amy_info)
 def car(manufacturer, model, **car_info):
     """Info about a car"""
     toyota = {}
-    
-    
     toyota['manu_name'] = manufacturer
     toyota['model_name'] = model
     for key, values in car_info.items():
@@ -85,8 +81,6 @@ print(toyota_info)
 
 # Alternative:
 def car(manufacturer, model, **car_info):
-    
-    
     """Create a dictionary about a car"""
     car_1 = {'car_manufacturer': manufacturer, 'car_model': model}
     for key, values in car_info.items():
