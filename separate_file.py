@@ -9,7 +9,7 @@ Created on Thu May 10 15:34:22 2018
 def make_shirt(size, text):
     """Describe t-shirt"""
     print(f"The t-shirt is size {size} and says \'{text}.\'")
-    
+
 
 make_shirt('small', 'i love python')
 
@@ -21,6 +21,6 @@ def describe_city(city, country='united states'):
     print(f"{city.title()} is in the {country.title()}.")
     print(f"{city.title()} is the capital.")
     print(f"{city.title()} has good food.")
-    
+
 
 describe_city(city='boston')
