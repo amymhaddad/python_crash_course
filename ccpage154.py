@@ -23,21 +23,33 @@ make_sandwich('cheese', 'ham')
 make_sandwich('bread', 'jelly')
 
 
+# Alternative
+def make_sandwich(*sandwich_items):
+    """Make a sandwich with an unlimited number of items"""
+    print("These are the items on your sandwich: ")
+    for item in sandwich_items:
+        print(f"- {item}")
+
+make_sandwich('cheese', 'ham', 'mayo')
+
 # Build a profile of yourself by calling build_profile(),
 # using your first and last names and three other key-value pairs that describe you.
 
 def build_profile(first, last, **user_info):
     """Build a dictionary about myself"""
-    profile_1 = {}
-    profile_1['first_name'] = first
-    profile_1['last_name'] = last
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
     for key, values in user_info.items():
-        profile_1[key] = values
-    return profile_1
+        profile[key] = values
+
+
+    return profile
 
 
 profile_info = build_profile('amy', 'haddad', age=34, location='boston')
 print(profile_info)
+
 
 # Alternative:
 def build_profile(first, last, age, location, food):
@@ -46,7 +58,7 @@ def build_profile(first, last, age, location, food):
         'first_name': first,
         'last_name': last, 
         'current_age': age,
-        'current_location': location,
+        'current_location': location, 
         'favorite_food': food,
     }
     return my_profile
@@ -57,38 +69,41 @@ amy_info = build_profile(first='amy',
                         age=34,
                         location='boston',
                         food='baklava')
+
 print(amy_info)
 
 
-# Write a function that stores information about a car in a diction-ary.
+# Write a function that stores information about a car in a diction- ary.
 # The function should always receive a manufacturer and a model name.
 # It should then accept an arbitrary number of keyword arguments.
 # Call the func- tion with the required information and two other name-value pairs
 
 def car(manufacturer, model, **car_info):
     """Info about a car"""
-    toyota = {}
-    toyota['manu_name'] = manufacturer
-    toyota['model_name'] = model
+    new_car = {}
+    new_car['manu_name'] = manufacturer
+    new_car['model_name'] = model
     for key, values in car_info.items():
-        toyota[key] = values
+        new_car[key] = values
 
-    return toyota
+    return new_car
 
 
-toyota_info = car('toyota', 't_1', year=2012, miles=1000)
+toyota_info = car('toyota', 't_1', year=2018, miles=1000)
 print(toyota_info)
+
 
 # Alternative:
 def car(manufacturer, model, **car_info):
     """Create a dictionary about a car"""
-    car_1 = {'car_manufacturer': manufacturer, 'car_model': model}
+    car_stats = {'car_manufacturer': manufacturer, 'car_model': model}
     for key, values in car_info.items():
-        car_1[key] = values
-    return car_1
+        car_stats[key] = values
+    return car_stats
 
 toyota = car('toyota', 
             't-10', 
             year=2012, 
             miles=100000)
 print(toyota)
+
