@@ -17,7 +17,7 @@ class Restaurant():
     def __init__(self, name, cuisine):
         self.name = name
         self.cuisine = cuisine
-    
+
     def describe_restaurant(self):
         """Describe the restaurant"""
         print(f"{self.name.title()} is the name of the restaurant.")
@@ -26,8 +26,10 @@ class Restaurant():
     def open(self):
         """Indicate whether the restaurant is open"""
         print(f"{self.name.title()} is open today.")
-    
+
 restaurant = Restaurant('grotto', 'italian')
+
+
 print(f"My favorite restaurant is called {restaurant.name.title()}.")
 print(f"{restaurant.name.title()} serves {restaurant.cuisine.title()} food.")
 
@@ -42,7 +44,7 @@ class Restaurant():
     def __init__(self, name, cuisine):
         self.name = name
         self.cuisine = cuisine
-    
+
     def describe_restaurant(self):
         """Write two sentences that describe a restaurant"""
         print(f"The name of the restaurant is: {self.name.title()}.")
@@ -52,7 +54,10 @@ class Restaurant():
         """Indicate if restaurant is open"""
         print(f"{self.name.title()} is open today.")
 
+        
 my_fav_restaurant = Restaurant('aqua al 2', 'italian')
+
+
 my_fav_restaurant.describe_restaurant()
 
 your_fav_restaurant = Restaurant('posto', 'italian')
@@ -65,7 +70,7 @@ steakhouse_restaurant.describe_restaurant()
 # Make a class called User.
 # Create two attributes called first_name and last_name, and then create several
 # other attributes that are typically stored in a user profile.
-# Make a method called describe_user() that prints a summary of the user’s information. 
+# Make a method called describe_user() that prints a summary of the user’s information.
 # Make another method called greet_user() that prints a personalized greeting to the user.
 # Create several instances representing different users, and call both methods for each user.
 class User():
@@ -75,17 +80,19 @@ class User():
         self.last_name = last_name
         self.location = location
         self.age = age
-    
+
     def describe_user(self):
         """Summarize information about the user"""
         print(f"The user's name is {self.first_name.title()} {self.last_name.title()}.")
         print(f"{self.first_name.title()} lives in {self.location.title()} and is {self.age} years old.")
-    
+
     def greet_user(self):
         """Write a personalized greeting to user"""
         print(f"Hello, {self.first_name.title()}!")
 
 user_1 = User('shara', 'bradley', 'maine', 30)
+
+
 user_1.describe_user()
 user_1.greet_user()
 
