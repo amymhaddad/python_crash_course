@@ -54,7 +54,7 @@ class Restaurant():
         """Indicate if restaurant is open"""
         print(f"{self.name.title()} is open today.")
 
-        
+    
 my_fav_restaurant = Restaurant('aqua al 2', 'italian')
 
 
