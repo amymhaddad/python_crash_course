@@ -13,15 +13,16 @@ Created on Thu May 10 15:34:22 2018
 
 class Restaurant():
     """An attempt to model a restaurant"""
-    def __init__(self, restuaruant_name, restaurant_cuisine):
+
+    def __init__(self, restaurant_name, restaurant_cuisine, number_served=0):
         """Initialize the attributes"""
-        self.restuaruant_name = restuaruant_name
-        self.restuaruant_cuisine = restaurant_cuisine
-        self.number_served = 5
-    
+        self.restaurant_name = restaurant_name
+        self.restaurant_cuisine = restaurant_cuisine
+        self.number_served = number_served
+
     def describe_restaruant(self):
         """Write a variable that returns a summary of the restaurant"""
-        restaurant_details = self.restuaruant_name.title() + " serves " + self.restuaruant_cuisine.title() + " food."
+        restaurant_details = self.restaurant_name.title() + " serves " + self.restaurant_cuisine.title() + " food."
         return restaurant_details
 
     # Add a method so I can set the number of guests served
@@ -37,11 +38,11 @@ class Restaurant():
     # I added a method here so I can call the method, instead of printing a statment about the total number of guests served
     def statement_for_number_served(self):
         """Print a statement that tells the number of people served"""
-        print(f"The total number of people served is {int(self.number_served)}.")
+        print(f"The total number of people served is {self.number_served}.")
 
 restaurant = Restaurant('grotto', 'italian')
 print(restaurant.describe_restaruant())
-print(f"{restaurant.restuaruant_name.title()} has served {restaurant.number_served} people.")
+print(f"{restaurant.restaurant_name.title()} has served {restaurant.number_served} people.")
 
 print('\n')
 
@@ -72,35 +73,35 @@ restaurant.statement_for_number_served()
 
 class User():
     """An attempt to model a user"""
+
     def __init__(self, first, last):
         """Initialize the attributes"""
         self.first = first
         self.last = last
         self.login_attempts = 0
 
-    def increment_login_attempts(self, increase_attempts):
+    def increment_login_attempts(self):
         """Increment the login attempts"""
-        self.login_attempts += increase_attempts
-    
-    def reset_login_attempts(self, reset):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
         """Reset the login attempts to 0"""
-        self.login_attempts = reset
-    
+        self.reset_login_attempts = 0
+        print("Your login attempts has been reset to 0.")
+
     def print_total_login_attempts(self):
         """Print a statement with the number of login attempts"""
-        if self.login_attempts >1: 
+        if self.login_attempts > 1: 
             print(f"The total attempts are: {self.login_attempts}.")
         else:
             print(f"The total attempt is: {self.login_attempts}.")
 
 user = User('amy', 'haddad')
-user.increment_login_attempts(1)
-user.increment_login_attempts(1)
-user.increment_login_attempts(1)
-user.increment_login_attempts(1)
+user.increment_login_attempts()
+user.print_total_login_attempts()
 
+user.increment_login_attempts()
 user.print_total_login_attempts()
 
 print('\n')
-user.reset_login_attempts(0)
-user.print_total_login_attempts()
+user.reset_login_attempts()
