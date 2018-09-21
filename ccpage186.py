@@ -6,7 +6,6 @@ Created on Thu May 10 15:34:22 2018
 @author: amyhaddad
 """
 
-
 # Start with Exercise 6-4 (page 108), where you used a standard dictionary to represent a glossary.
 # Rewrite the program using the OrderedDict class and make sure the order of the
 # output matches the order in which key-value pairs were added to the dictionary.
@@ -55,7 +54,6 @@ class Die():
                 break
 
 dice = Die(6)
-
 print(dice.roll_die())
 
 # Make a 10-sided die and a 20-sided die . Roll each die 10 times.
@@ -81,7 +79,6 @@ class Die():
                 break
 
 dice = Die(10)
-
 print(dice.roll_die())
 
 
@@ -121,9 +118,7 @@ class Die():
                 break
 
 dice_10 = Die()
-
 print(dice_10.roll_die_10())
 
 dice_20 = Die()
-
 print(dice_20.roll_die_20())
