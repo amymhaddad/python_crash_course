@@ -10,7 +10,6 @@ Created on Thu May 10 15:34:22 2018
 
 class User():
 
-
     """"An attempt to model a user"""
     def __init__(self, first_name, last_name):
         """Initialize the attributes"""
