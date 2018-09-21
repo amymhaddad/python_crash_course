@@ -6,6 +6,7 @@ Created on Thu May 10 15:34:22 2018
 @author: amyhaddad
 """
 
+
 # Start with Exercise 6-4 (page 108), where you used a standard dictionary to represent a glossary.
 # Rewrite the program using the OrderedDict class and make sure the order of the
 # output matches the order in which key-value pairs were added to the dictionary.
@@ -48,23 +49,25 @@ class Die():
         while self.roll <= 10:
             self.roll += 1
             random_number = randint(1, self.sides)
-            if self.roll <= 10: 
+            if self.roll <= 10:
                 print(f"The random number is {random_number}.")
-            else: 
+            else:
                 break
 
 dice = Die(6)
+
 print(dice.roll_die())
 
 # Make a 10-sided die and a 20-sided die . Roll each die 10 times.
 from random import randint
 
 class Die():
+
     """An attempt to model a dice"""
     def __init__(self, sides=10):
         """Initialize the attribute"""
         self.sides = sides
-    
+
     def roll_die(self):
         """Roll the dice 20 times and get a random number"""
         roll = 0
@@ -78,13 +81,15 @@ class Die():
                 break
 
 dice = Die(10)
+
 print(dice.roll_die())
 
-        
-###An alternative approach to check for a 10 or 20-sided dice:
+
+# An alternative approach to check for a 10 or 20-sided dice:
 from random import randint
 
 class Die():
+
     """An attempt to model a dice"""
     def __init__(self, roll=0):
         """Initialize the attribute"""
@@ -93,18 +98,19 @@ class Die():
         self.sides_10 = 10
 
     def roll_die_10(self):
-        """Roll the dice 10 times and get a random number"""
 
+        """Roll the dice 10 times and get a random number"""
         while self.roll <= 10:
             self.roll += 1
             random_number = randint(1, self.sides_10)
 
-            if self.roll <10:
+            if self.roll < 10:
                 print(f"The random number is {random_number}.")
 
     def roll_die_20(self):
+
         """Roll the dice 20 times and get a random number"""
-       
+
         while self.roll <= 20:
             self.roll += 1
             random_number = randint(1, self.sides_20)
@@ -114,9 +120,10 @@ class Die():
             else:
                 break
 
-    
 dice_10 = Die()
+
 print(dice_10.roll_die_10())
 
 dice_20 = Die()
+
 print(dice_20.roll_die_20())
