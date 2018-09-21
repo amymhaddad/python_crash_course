@@ -73,35 +73,33 @@ restaurant.statement_for_number_served()
 
 class User():
     """An attempt to model a user"""
-
     def __init__(self, first, last):
         """Initialize the attributes"""
         self.first = first
         self.last = last
         self.login_attempts = 0
-
+    
     def increment_login_attempts(self):
-        """Increment the login attempts"""
+        """Increment the login attempts by 1"""
         self.login_attempts += 1
-
+    
     def reset_login_attempts(self):
-        """Reset the login attempts to 0"""
-        self.reset_login_attempts = 0
-        print("Your login attempts has been reset to 0.")
-
-    def print_total_login_attempts(self):
-        """Print a statement with the number of login attempts"""
-        if self.login_attempts > 1: 
-            print(f"The total attempts are: {self.login_attempts}.")
+        """Reset the login attempts to 0."""
+        self.login_attempts = 0
+    
+    def print_login_attempts(self):
+        """Pring the user's login attempts"""
+        if self.login_attempts == 0:
+            print("Your login attempts has been reset to 0.")
+        elif self.login_attempts >= 1:
+            print(f"You've attempted to login {self.login_attempts} times.")
         else:
-            print(f"The total attempt is: {self.login_attempts}.")
+            print(f"You've attempted to login {self.login_attempts} time.")
 
 user = User('amy', 'haddad')
 user.increment_login_attempts()
-user.print_total_login_attempts()
-
 user.increment_login_attempts()
-user.print_total_login_attempts()
+user.print_login_attempts()
 
-print('\n')
 user.reset_login_attempts()
+user.print_login_attempts()
