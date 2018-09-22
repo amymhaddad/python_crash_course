@@ -134,6 +134,7 @@ print(user_type.priviledges_available.show_priviledges())
 # Add a method to the Battery class called upgrade_battery().
 # This method should check the battery size and set the capacity to 85 if it isn’t already.
 # Make an electric car with a default battery size, call get_range() once, and then call get_range() a second time after upgrading the battery.
+
 class Car():
     """An attempt to model a car"""
 
@@ -145,27 +146,24 @@ class Car():
 class Battery():
     """An attempt to provide detail about a battery for a specific car, an electric one"""
 
-    def __init__(self, range=100, battery_size=70):
+    def __init__(self, range, battery_size):
         """Initialize the attribute"""
         self.range = range
         self.battery_size = battery_size
         
-    def get_range(self):
+    def get_range(self, mileage):
         """Report the number of miles a car will get based on the battery size"""
-        if self.battery_size == 70:
-            self.range = 240
-        elif self.battery_size == 85:
-            self.range = 270
+        self.range += mileage
 
-        print(f"This car can go about {self.range} miles when fully charged.")
-
+        return self.range
+        
     def upgrade_battery(self):
         """Increase the battery size"""
         if self.battery_size < 85:
             self.battery_size = 85
-            upgraded_range = 270
+            self.range += 25
 
-        print(f"This car can go about {upgraded_range} miles now.")
+        return self.battery_size
 
     def describe_battery(self):
         """Write a sentence that describes the size of the battery"""
@@ -177,10 +175,8 @@ class ElecticCar(Car):
     def __init__(self, make, model, year):
         """Initialize the attributes from parent to child"""
         super().__init__(make, model, year)
-        self.battery = Battery()
+        self.battery = Battery(100, 70)
 
 my_tesla = ElecticCar('tesla', 't1', 2019)
 
-print(my_tesla.battery.get_range())
-print(my_tesla.battery.upgrade_battery())
-
+print(f"This car can go about {my_tesla.battery.get_range(50)} miles now.")
