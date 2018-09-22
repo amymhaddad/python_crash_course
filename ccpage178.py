@@ -6,14 +6,6 @@ Created on Thu May 10 15:34:22 2018
 @author: amyhaddad
 """
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu May 10 15:34:22 2018
-
-@author: amyhaddad
-"""
-
 # Write a class called IceCreamStand that inherits from the Restaurant class.
 # Add an attribute called flavors that stores a list of ice cream flavors.
 # Write a method that displays these flavors.
@@ -93,6 +85,7 @@ user_type = Admin('tom', 'smith')
 print(user_type.show_admin_priviledges())
 
 
+
 # Based on the code above:
 # Write a separate Privileges class. 
 # The class should have one attribute, privileges, that stores a list of strings as described in exercise above. 
@@ -144,20 +137,19 @@ print(user_type.priviledges_available.show_priviledges())
 class Car():
     """An attempt to model a car"""
 
-    def __init__(self, make, model, year, range):
+    def __init__(self, make, model, year):
         self.make = make
         self.model = model
         self.year = year
-        self.range = range
-        self.odometer_reading = 100
 
 class Battery():
     """An attempt to provide detail about a battery for a specific car, an electric one"""
 
-    def __init__(self, battery_size=70):
+    def __init__(self, range=100, battery_size=70):
         """Initialize the attribute"""
+        self.range = range
         self.battery_size = battery_size
-
+        
     def get_range(self):
         """Report the number of miles a car will get based on the battery size"""
         if self.battery_size == 70:
@@ -182,14 +174,13 @@ class Battery():
 class ElecticCar(Car):
     """An attempt to model a specific type of car, an electric one"""
 
-    def __init__(self, make, model, year, range):
+    def __init__(self, make, model, year):
         """Initialize the attributes from parent to child"""
-        super().__init__(make, model, year, range)
+        super().__init__(make, model, year)
         self.battery = Battery()
 
-
-my_tesla = ElecticCar('tesla', 't1', 240, 2019)
+my_tesla = ElecticCar('tesla', 't1', 2019)
 
 print(my_tesla.battery.get_range())
-
 print(my_tesla.battery.upgrade_battery())
+
