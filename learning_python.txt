@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 10 15:34:22 2018
+
+@author: amyhaddad
+"""
+
+
+# Open a blank file in your text editor and write a few lines summarizing what you’ve learned about Python so far
+# Start each line with the phrase In Python you can... . Save the file as learning_python.txt
+print("""
+In Python, you can get user input. 
+In Python, you can create lists and dictionaries, and loop through both.
+In Python, you can create functions to have Python do specific tasks.
+In Python, you can write classes, which are like a blueprint."
+""")
+
+# In the file file_reader.py: Write a program that reads the file and prints what you wrote three times
