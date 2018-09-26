@@ -22,4 +22,3 @@ def read_text(filename):
         print(f"The file {filename} contains {line_count} instances of the word \'the.\'")
 
 read_text('son_of_tarzan.txt')
-
