@@ -9,15 +9,17 @@ Created on Thu May 10 15:34:22 2018
 # Write a program that reads the files you found at Project Gutenberg and determines how many times the word 'the' appears in each text .
 
 def read_text(filename):
+    
     """Read a text and count the number of instances a word appears"""
-    try: 
+    try:
         with open(filename) as f_object:
             contents = f_object.read()
     except ValueError:
         print(f"The file {filename} is not found.")
-    else: 
+    else:
         normalized_contents = contents.lower()
         line_count = normalized_contents.count("the")
         print(f"The file {filename} contains {line_count} instances of the word \'the.\'")
 
 read_text('son_of_tarzan.txt')
+
