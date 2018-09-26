@@ -12,7 +12,7 @@ filename = 'ccpage199_poll_results.txt'
 print("Enter you information when prompted.")
 print("Type 'q' to quit. ")
 
-while True: 
+while True:
     user_name = input("Enter your name: ")
 
     if user_name == 'q':
@@ -23,4 +23,3 @@ while True:
             file_object.write(f"Name: {user_name.title()}\n")
             file_object.write(f"Reason: {user_reason}\n")
             file_object.write("\n")
-            
