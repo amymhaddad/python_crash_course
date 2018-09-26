@@ -14,17 +14,17 @@ print("Enter numbers when prompted, and I'll add them together. ")
 first_number = input("Enter first number: ")
 second_number = input("Enter a second number: ")
 
-try: 
+try:
     int(first_number)
     int(second_number)
 except ValueError:
     print("You must enter two numbers.")
-else: 
+else:
     sum = int(first_number) + int(second_number)
     print(sum)
 
 
-# 10-7 Wrap your code from Exercise 10-6 in a while loop so the user can 
+# 10-7 Wrap your code from Exercise 10-6 in a while loop so the user can
 # continue entering numbers even if they make a mistake and enter text instead of a number.
 print("Enter two numbers when prompted and I'll add them together.")
 print("Type 'q' to quit. ")
@@ -37,11 +37,11 @@ while True:
     second_number = input("Enter a second number: ")
     if second_number == 'q':
         break
-    try: 
+    try:
         int(first_number)
         int(second_number)
     except ValueError:
         print("You must enter numbers.")
-    else: 
+    else:
         sum = int(first_number) + int(second_number)
         print(f"The sum is {sum}.")
