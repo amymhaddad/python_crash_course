@@ -9,7 +9,7 @@ Created on Thu May 10 15:34:22 2018
 import json
 
 filename = 'fav_number.json1'
-try: 
+try:
     with open(filename) as file_object:
         fav_number = json.load(file_object)
 except FileNotFoundError:
