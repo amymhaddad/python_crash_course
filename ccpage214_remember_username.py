@@ -9,18 +9,20 @@ Created on Thu May 10 15:34:22 2018
 import json
 
 def get_username():
+
     """Get the username, if one exists"""
 
     filename = 'username1.json'
-    try: 
+    try:
         with open(filename) as f_obj:
             username = json.load(f_obj)
     except FileNotFoundError:
         None
-    else: 
+    else:
         return username
 
 def create_username():
+
     """Create a username, if one doesn't exist"""
 
     filename = 'username1.json'
@@ -31,6 +33,7 @@ def create_username():
     return username
 
 def greet_user():
+
     """Greet the user and make sure the users are the same people"""
 
     username = get_username()
@@ -39,8 +42,9 @@ def greet_user():
 
     if verify_username == 'yes':
         print(f"Welcome back, {username}!")
-    else: 
+    else:
         username = create_username()
         print(f"We'll remember you next time, {username}.")
 
 greet_user()
+
