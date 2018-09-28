@@ -22,6 +22,7 @@ class city_country_test(unittest.TestCase):
 unittest.main()
 
 
+
 # Test the function you wrote in 11-2
 
 import unittest
@@ -35,7 +36,7 @@ class CityInfoTest(unittest.TestCase):
 
         city_country_format = city_country('dublin', 'ireland')
         self.assertEqual(city_country_format, 'Dublin, Ireland')
-  
+
     def test_city_country_population(self):
         """Does the city, country information look like this: 'Dublin, Ireland - 500000?'"""
 
@@ -43,3 +44,4 @@ class CityInfoTest(unittest.TestCase):
         self.assertEqual(city_country_format, 'Dublin, Ireland - 500000')
 
 unittest.main()
+
